@@ -1,5 +1,5 @@
 window.onload = () => {
-    const button = document.createComment('button');
+    const button = document.createElement('button');
     button.id = "darkModeButton";
     button.textContent = "Dark Mode!";
     document.querySelector('#end').prepend(button);
