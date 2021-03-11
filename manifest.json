@@ -1,0 +1,33 @@
+{
+    "name": "Test Extension",
+    "version": "1.0.0",
+    "description": "This is my first test extension",
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+        
+    },
+    "permissions": [
+        "bookmarks"
+    ],
+    "content_scripts": [
+        {
+            "js": ["content.js"],
+            "matches": ["https://*.youtube.com/*"],
+            "exclude_matches": ["https://*.youtube.com/watch*"],
+            "run_at": "document_end"
+        }
+    ],
+    "icons": {
+        "16": "dark-mode.png",
+        "48": "dark-mode.png",
+        "128": "dark-mode.png"
+    },
+
+    "browser_action": {
+        "default_title": "Turn to dak mode",
+        "default_popup": "popup.html"
+    }
+
+}
